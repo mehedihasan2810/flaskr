@@ -4,14 +4,12 @@ click==8.1.7
 coverage==7.5.1
 exceptiongroup==1.2.1
 Flask==3.0.3
--e git+https://github.com/mehedihasan2810/flaskr.git@adeb013350a84f1144ee2160f3315a8226cc5f52#egg=flaskr
 importlib_metadata==7.1.0
 iniconfig==2.0.0
 itsdangerous==2.2.0
 Jinja2==3.1.4
 MarkupSafe==2.1.5
 packaging==24.0
-pkg_resources==0.0.0
 pluggy==1.5.0
 pyproject_hooks==1.1.0
 pytest==8.2.1
