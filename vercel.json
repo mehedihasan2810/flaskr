@@ -1,9 +1,15 @@
 {
   "version": 2,
   "builds": [
-      {"src": "flaskr", "use": "@vercel/python"}
+    {
+      "src": "run.py",
+      "use": "@vercel/python"
+    }
   ],
   "routes": [
-      {"src": "/(.*)", "dest": "flaskr"}
+    {
+      "src": "/(.*)",
+      "dest": "/run.py"
+    }
   ]
 }
