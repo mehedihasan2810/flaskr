@@ -1,4 +1,4 @@
-from flaskr import create_app
+from techie import create_app
 
 app = create_app()
 
