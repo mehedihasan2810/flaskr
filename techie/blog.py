@@ -1,15 +1,22 @@
+from functools import wraps
+
+import requests
+
 from flask import (
     Blueprint, flash, g, redirect, render_template, request, url_for
 )
+
 from werkzeug.exceptions import abort
 
 from techie.auth import login_required
 from techie.db import get_db
+from techie.middleware import adminAuthorization , guestAuthorization
 
 bp = Blueprint('blog', __name__)
 
 
 @bp.route('/')
+@guestAuthorization
 def index():
     db = get_db()
     posts = db.execute(
@@ -22,6 +29,7 @@ def index():
 
 @bp.route('/create', methods=('GET', 'POST'))
 @login_required
+@adminAuthorization
 def create():
     if request.method == 'POST':
         title = request.form['title']
@@ -65,6 +73,7 @@ def get_post(id, check_author=True):
 
 @bp.route('/<int:id>/update', methods=('GET', 'POST'))
 @login_required
+@adminAuthorization
 def update(id):
     post = get_post(id)
 
@@ -93,6 +102,7 @@ def update(id):
 
 @bp.route('/<int:id>/delete', methods=('POST',))
 @login_required
+@adminAuthorization
 def delete(id):
     get_post(id)
     db = get_db()
