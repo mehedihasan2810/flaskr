@@ -18,8 +18,9 @@ A simple web tech blog web application built with python(flask).
 [Watch the demo video](https://github.com/mehedihasan2810/techie/assets/117534561/7ce468bf-e404-4104-8b9c-97fbc054b9ab)
 
 ## Authorization using `OPAL`
-The policy permit statement for different roles of users defined `rbac.rego` file
+The policy permit statement for different roles of users defined in `rbac.rego` file
 
+`rbac.rego`
 ```bash
 package app.rbac
 
@@ -39,6 +40,7 @@ user_is_guest {
 
 The middlewares that handle authorization using `OPAL` can be found in the `/techie/middleware.py` file
 
+`/techie/middleware.py`
 ```py
 from functools import wraps
 
@@ -105,5 +107,69 @@ def guestAuthorization(f):
         return f(*args, **kwargs)
     
     return decorated
+```
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have the following packages installed
+
+- Python 3.x
+- Flask
+- pip (Python package installer)
+- Docker
+- docker-compose
+
+### Installation
+
+1. **First, Clone the repo and go to the project folder**
+```bash
+git clone https://github.com/mehedihasan2810/techie.git
+cd techie
+```
+
+2. **Create a virtual environment**
+
+- On `macOS/Linux`
+```bash
+python3 -m venv .venv
+```
+
+- On `Windows`
+```bash
+py -3 -m venv .venv
+```
+
+3. **Activate the virtual environment**
+
+- On `macOS/Linux`
+```bash
+. .venv/bin/activate
+```
+
+- On `Windows`
+```bash
+.venv\Scripts\activate
+```
+
+4. **Install the dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+5. **Initialize the Database File**
+```bash
+flask --app techie init-db
+```
+
+6.  **Now spin up the `OPAL` authorization system by running the docker compose file**
+```bash
+docker-compose up
+```
+
+7. **Open another terminal window and follow the `2 and 3 steps` to create and activate the virtual environment in that terminal too then run our blog application by executing the below command**
+```bash
+flask --app techie run --debug
 ```
 
