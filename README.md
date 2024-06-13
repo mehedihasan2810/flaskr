@@ -1,6 +1,6 @@
 # Techie
 
-A simple web tech blog web application built with python(flask).
+This is a tech blog web application built with Python (Flask) and SQLite for the database. It uses Opal for user authorization. Users can register, log in, log out, and manage blog posts. The app allows creating, editing, and deleting blog posts.
 
 ## Features
 - Login and registration
