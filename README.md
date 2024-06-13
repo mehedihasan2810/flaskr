@@ -168,7 +168,7 @@ flask --app techie init-db
 docker-compose up
 ```
 
-7. **Open another terminal window and follow the `2 and 3 steps` to create and activate the virtual environment in that terminal too then run our blog application by executing the below command**
+7. **Open another terminal window and follow the `3 no. step` to activate the virtual environment in that terminal too then run our blog application by executing the below command**
 ```bash
 flask --app techie run --debug
 ```
