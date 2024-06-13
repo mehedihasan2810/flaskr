@@ -116,7 +116,6 @@ def guestAuthorization(f):
 Make sure you have the following packages installed
 
 - Python 3.x
-- Flask
 - pip (Python package installer)
 - Docker
 - docker-compose
@@ -172,4 +171,38 @@ docker-compose up
 ```bash
 flask --app techie run --debug
 ```
+
+8. Open your browser and visit
+```bash
+http://127.0.0.1:5000/
+```
+
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+
+2. Clone the repo
+```bash
+git clone https://github.com/mehedihasan2810/techie.git
+```
+3. Create a new branch
+```bash
+git checkout -b feature/fix-bug
+```
+4. Make your changes
+
+5. Stage, commit and push your changes
+```bash
+git add .
+git commit -m 'feat: add feature'
+git push origin feature/fix-bug
+```
+7. Create a new Pull Request
+
+<br>
+<br>
+
+Please give a star. Thanks.
 
