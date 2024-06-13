@@ -6,6 +6,7 @@ A simple web tech blog web application built with python(flask).
 - Login and registration
 - Add new blog post
 - Edit blog post
+- Delete blog post
 - Authorization using `OPAL`
 
 ## Technologies
