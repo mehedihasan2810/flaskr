@@ -15,5 +15,5 @@ A simple web tech blog web application built with python.
 
 ## Demo
 
-https://github.com/mehedihasan2810/techie/assets/117534561/7ce468bf-e404-4104-8b9c-97fbc054b9ab
+[Watch the demo video](https://github.com/mehedihasan2810/techie/assets/117534561/7ce468bf-e404-4104-8b9c-97fbc054b9ab)
 
